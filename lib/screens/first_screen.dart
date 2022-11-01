@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design_shop_github/screens/second_screen.dart';
-import 'package:badges/badges.dart';
+ import 'package:badges/badges.dart';
+import 'package:ui_design_shop_github/screens/test_second.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _FirstScreenState extends State<FirstScreen> {
 
   List<String> categoryIcons = [
     "image/house.png",
-        "image/tshirt.png",
+    "image/tshirt.png",
     "image/watch.png",
     "image/sh.png",
     "image/electronics.png",
@@ -44,9 +44,9 @@ class _FirstScreenState extends State<FirstScreen> {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Color(0xfff6edf1),
+      backgroundColor: const Color(0xfff6edf1),
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Home',
           style: TextStyle(color: Colors.black),
         ),
@@ -66,7 +66,7 @@ class _FirstScreenState extends State<FirstScreen> {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.only(left: 10.0, top: 10.0, bottom: 10.0),
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, bottom: 10.0),
             child: CircleAvatar(
               radius: 17,
               backgroundColor: Colors.white,
@@ -84,8 +84,8 @@ class _FirstScreenState extends State<FirstScreen> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
+          const Padding(
+            padding: EdgeInsets.all(10.0),
             child: CircleAvatar(
               backgroundColor: Colors.white,
               backgroundImage: AssetImage('image/mamun.png'),
@@ -94,7 +94,7 @@ class _FirstScreenState extends State<FirstScreen> {
         ],
       ),
       body: ListView(
-        padding: EdgeInsets.only(left: 8, right: 8),
+        padding: const EdgeInsets.only(left: 8, right: 8),
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -110,27 +110,27 @@ class _FirstScreenState extends State<FirstScreen> {
                             borderSide: BorderSide.none,
                             borderRadius: BorderRadius.circular(18)),
                         labelText: "Search",
-                        suffixIcon: Icon(Icons.search)),
+                        suffixIcon: const Icon(Icons.search)),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Container(
-                padding: EdgeInsets.only(left: 5, right: 5),
+                padding: const EdgeInsets.only(left: 5, right: 5),
                 height: 30,
                 width: 50,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
                     color: Colors.pinkAccent,
-                    image: DecorationImage(
+                    image: const DecorationImage(
                         alignment: Alignment.center,
                         image: AssetImage('image/icons/filter.png'))),
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -139,12 +139,13 @@ class _FirstScreenState extends State<FirstScreen> {
             decoration: BoxDecoration(
                 color: Colors.redAccent,
                 borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
+                image: const DecorationImage(
                     fit: BoxFit.cover, image: AssetImage('image/poster.jpg'))),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
+          
           // SingleChildScrollView(
           //   scrollDirection: Axis.horizontal,
           //   child: Row(
@@ -404,7 +405,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         });
                       },
                       child: Container(
-                        padding: EdgeInsets.only(left: 7, right: 7),
+                        padding: const EdgeInsets.only(left: 7, right: 7),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.0),
                             color: Colors.white),
@@ -416,7 +417,7 @@ class _FirstScreenState extends State<FirstScreen> {
                             //   categoryIcons[i],
                             //   color: selectedIndex == i ? Colors.pinkAccent : Colors.grey,
                             // ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4.0,
                             ),
                             Text(
@@ -433,13 +434,13 @@ class _FirstScreenState extends State<FirstScreen> {
                   );
                 }),
           ),
-          SizedBox(
+          const SizedBox(
             height: 7,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 "Popular",
                 style: TextStyle(
                   color: Colors.black,
@@ -452,7 +453,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ViewAllProduct()));
+                            builder: (context) => const TestSecond()));
                   });
                 },
                 child: Card(
@@ -460,7 +461,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 3, bottom: 3, left: 5),
                     child: Row(
-                      children: [
+                      children: const [
                         Text(
                           "View All",
                           style: TextStyle(fontSize: 11),
@@ -473,12 +474,12 @@ class _FirstScreenState extends State<FirstScreen> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           GridView.count(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: 2,
             children: [
               InkWell(
@@ -487,7 +488,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ViewAllProduct()));
+                            builder: (context) => const TestSecond()));
                   });
                 },
                 child: Stack(
@@ -495,7 +496,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     SizedBox(
                       height: h,
                       width: w,
-                      child: Card(
+                      child: const Card(
                         color: Color(0xffedf7be),
                       ),
                     ),
@@ -504,18 +505,18 @@ class _FirstScreenState extends State<FirstScreen> {
                       child: Container(
                         height: h / 3,
                         width: w / 3,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             image: DecorationImage(
                           image: AssetImage('image/sh.png'),
                         )),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5, left: 5),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 5, left: 5),
                       child: Card(
                         color: Colors.white,
                         child: Padding(
-                          padding: const EdgeInsets.all(1.0),
+                          padding: EdgeInsets.all(1.0),
                           child: Text(
                             "New",
                             style: TextStyle(
@@ -527,7 +528,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     Padding(
                       padding: EdgeInsets.only(top: h / 5, left: w / 20),
                       child: Column(
-                        children: [
+                        children:const [
                           Text(
                             "Nike Shoes",
                             style: TextStyle(
@@ -547,7 +548,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   SizedBox(
                     height: h,
                     width: w,
-                    child: Card(
+                    child: const Card(
                       color: Color(0xfffbe5ec),
                     ),
                   ),
@@ -556,7 +557,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     child: Container(
                       height: h / 3,
                       width: w / 3,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
                         image: AssetImage('image/gridview/sofa.png'),
                       )),
@@ -565,7 +566,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   Padding(
                     padding: EdgeInsets.only(top: h / 5, left: 20),
                     child: Column(
-                      children: [
+                      children: const [
                         Text(
                           "Chair",
                           style: TextStyle(
@@ -586,16 +587,16 @@ class _FirstScreenState extends State<FirstScreen> {
                   SizedBox(
                     height: h,
                     width: w,
-                    child: Card(
+                    child: const Card(
                       color: Color(0xffbeedf7),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5, left: 5),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 5, left: 5),
                     child: Card(
                       color: Colors.white,
                       child: Padding(
-                        padding: const EdgeInsets.all(1.0),
+                        padding: EdgeInsets.all(1.0),
                         child: Text(
                           "New",
                           style: TextStyle(
@@ -609,7 +610,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     child: Container(
                       height: h / 6,
                       width: w / 6,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
                         image: AssetImage('image/watch.png'),
                       )),
@@ -617,7 +618,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: h / 5, left: w / 12),
-                    child: Text(
+                    child: const Text(
                       "Smart Watch",
                       style:
                           TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
@@ -625,7 +626,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: h / 4.5, left: w / 10),
-                    child: Text(
+                    child: const Text(
                       "\$ 6.00",
                       style:
                           TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
@@ -638,16 +639,16 @@ class _FirstScreenState extends State<FirstScreen> {
                   SizedBox(
                     height: h,
                     width: w,
-                    child: Card(
+                    child: const Card(
                       color: Color(0xfff9d1f2),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 1),
+                    padding: const EdgeInsets.only(left: 1),
                     child: Container(
                       height: h / 5,
                       width: w / 2,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
                         // fit: BoxFit.cover,
                         image: AssetImage('image/shoes/s8.png'),
@@ -657,7 +658,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   Padding(
                     padding: EdgeInsets.only(top: h / 5, left: 10),
                     child: Column(
-                      children: [
+                      children: const[
                         Text(
                           "Jump Shoes",
                           style: TextStyle(
@@ -683,9 +684,9 @@ class _FirstScreenState extends State<FirstScreen> {
         currentIndex: _bottomSelectIndex,
         onTap: _onItemTapped,
         selectedFontSize: 0,
-        unselectedIconTheme: IconThemeData(color: Colors.grey, size: 22),
-        selectedIconTheme: IconThemeData(color: Colors.redAccent, size: 33),
-        items: [
+        unselectedIconTheme: const IconThemeData(color: Colors.grey, size: 22),
+        selectedIconTheme: const IconThemeData(color: Colors.redAccent, size: 33),
+        items: const[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite), label: "Favourite"),
